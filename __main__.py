@@ -1,7 +1,7 @@
 import os
+import sys
 
 loop = 1
-login = 0
 
 class bcolors:
     HEADER = '\033[95m'
@@ -23,10 +23,22 @@ print(bcolors.OKBLUE + "##           ##    ##     ## ##        ########  ######"
 print(bcolors.OKBLUE + "\nBy: Luxzi")
 print(bcolors.OKBLUE + "\nVersion 0.0.2a" + bcolors.BOLD + bcolors.WARNING + " ALPHA BUILD" + bcolors.OKGREEN + " https://github.com/Luxzi/PyMPEG\n")
 
-def mainloop():
 
-	com = input(bcolors.BOLD + bcolors.OKGREEN + "FFmpeg#> ")
-	os.system("ffmpeg " + com)
+def main():
 
-while loop == 1:    
-    mainloop()
+    while loop == 1:    
+        com = input(bcolors.BOLD + bcolors.OKGREEN + "FFmpeg~>")
+        if(com[:1] == "-"):
+            os.system("ffmpeg " + com)
+        else:
+            print(bcolors.WARNING + "Please Use A Paramter!")
+        
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        print('\nExiting... KeyboardInterupt')
+        try:
+            sys.exit(0)
+        except SystemExit:
+            os._exit(0)
