@@ -2,7 +2,7 @@
 A FFmpeg Shell Made in Python
 
 **The FFmpeg Package is Required To Use This**
-**Get it by Using** ___sudo apt install ffmpeg__
+**Get it by Using** ___sudo apt install ffmpeg___
 
 **v0.0.2a**
 
