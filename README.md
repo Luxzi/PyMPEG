@@ -1,3 +1,6 @@
+# WARNING~! This project is deprecated and has been abandoned !
+
+
 # PyMPEG
 A FFmpeg Shell Made in Python
 
